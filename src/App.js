@@ -19,10 +19,12 @@ function App() {
 
     let customerLoggedInHandler = (customerEmail) => {
         localStorage.setItem("customer", customerEmail);
+        setCustomer(customerEmail);
     }
 
     let customerLoggedOutHandler = () => {
         localStorage.removeItem("customer");
+        setCustomer(undefined);
     }
 
     return (
